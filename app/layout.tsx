@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Welcome Bonus - All In For You",
   description: "199 Free Spins",
+  icons: {
+    icon: "/images/Logo.svg",
+  },
 };
 
 export default function RootLayout({
