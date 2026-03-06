@@ -1,0 +1,5 @@
+The layout is built with Next.js and TailwindCSS and organized into clear, reusable components for easier maintenance. On the first row, I placed the Olympus image along with a spinning wheel, using a responsive flexbox layout that switches from a column on mobile to a row on larger screens. The second row contains four sections: Real Players Records, Gaming License, Gaming Provider, and Payment Method, all styled with responsive widths (w-full, sm:w-1/2) to keep things balanced across devices. For the Gaming License and Gaming Provider sections, I used arrays to render the images, making the code simpler and easier for other developers to follow. I also added page metadata including the title, description, and favicon, and organized a components and images folder to keep the project structure clean.
+
+Since the design is quite image-heavy, I implemented a loading state to ensure images fully load before rendering, providing a smooth user experience. Some elements rely on fixed widths and z-index layering to maintain visual accuracy, though this can reduce flexibility on unusual screen sizes.
+
+TechStack: NextJS, TailwindCss
