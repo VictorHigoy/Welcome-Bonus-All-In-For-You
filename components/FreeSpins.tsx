@@ -28,7 +28,7 @@ export default function FirstRow() {
         alt="background layer"
       />
       <div className="max-w-[1500px] relative z-30 mx-auto">
-        <div className="sm:mx-6 flex sm:flex-row flex-col items-center sm:gap-2 mb-0 sm:mb-2">
+        <div className="sm:mx-6 flex sm:flex-row flex-col px-5 sm:px-0 items-center sm:gap-2 mb-0 sm:mb-2">
           {/* Branding */}
           <div className="flex w-full sm:w-1/2 flex-col items-center">
             <div className="flex justify-center mb-2 sm:mb-3 w-full">
