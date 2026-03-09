@@ -12,7 +12,7 @@ export default function RealPlayersRecords() {
   return (
     <div className=" flex justify-center flex-col items-center mb-4 sm:mb-0">
       <h1
-        className={`${futuraBold.className} text-[10px] sm:text-[12px] tracking-widest text-center lg:text-[20px] mb-2 sm:mb-0`}
+        className={`${futuraBold.className} text-[10px] text-white sm:text-[12px] tracking-widest text-center lg:text-[20px] mb-2 sm:mb-0`}
       >
         BP9 REAL PLAYERS' RECORDS
       </h1>

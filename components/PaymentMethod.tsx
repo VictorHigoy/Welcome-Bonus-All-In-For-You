@@ -12,7 +12,7 @@ export default function PaymentMethod() {
   return (
     <div className="w-full flex justify-center flex-col items-center">
       <h1
-        className={`${futuraBold.className} text-[10px] tracking-widest sm:text-[12px] text-center lg:text-[20px] mb-3`}
+        className={`${futuraBold.className} text-white text-[10px] tracking-widest sm:text-[12px] text-center lg:text-[20px] mb-3`}
       >
         PAYMENT METHOD
       </h1>
@@ -21,7 +21,7 @@ export default function PaymentMethod() {
           width={418}
           height={41}
           src="/images/payment-method/payment-method.svg"
-          className="w-[209px] lg:w-[418px] h-auto"
+          className="w-52.25 lg:w-104.5 h-auto"
           alt="payment method"
         />
       </div>

@@ -43,7 +43,7 @@ export default function GameLicense() {
   return (
     <div className="w-full flex justify-center flex-col items-center">
       <h1
-        className={`${futuraBold.className} text-[10px] sm:text-[12px] text-center tracking-widest lg:text-[20px] mb-3`}
+        className={`${futuraBold.className} text-white text-[10px] sm:text-[12px] text-center tracking-widest lg:text-[20px] mb-3`}
       >
         GAMING LICENSE
       </h1>

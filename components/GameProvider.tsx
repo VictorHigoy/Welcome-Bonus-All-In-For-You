@@ -63,7 +63,7 @@ export default function GameProvider() {
   return (
     <div className="w-full flex justify-center flex-col items-center">
       <h1
-        className={`${futuraBold.className} text-[10px] tracking-widest text-center sm:text-[12px] lg:text-[20px] mb-3`}
+        className={`${futuraBold.className} text-[10px] text-white tracking-widest text-center sm:text-[12px] lg:text-[20px] mb-3`}
       >
         GAMING PROVIDERS
       </h1>
