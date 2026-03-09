@@ -11,7 +11,7 @@ export default function Home() {
   const handleSpinRef = useRef<() => void>(null);
 
   return (
-    <div className="w-screen overflow-hidden">
+    <div className="w-full overflow-hidden">
       <FreeSpins
         setIsWon={setIsWon}
         setIsClicked={setIsClicked}

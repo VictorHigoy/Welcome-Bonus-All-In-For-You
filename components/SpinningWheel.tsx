@@ -116,7 +116,7 @@ export default function SpinningWheel({
             <Image
               width={420}
               height={709}
-              src="/images/Wheel-Stopper.png"
+              src="/images/wheel/Wheel-Stopper.png"
               className="w-full h-auto relative z-10"
               alt="wheel stopper"
             />
