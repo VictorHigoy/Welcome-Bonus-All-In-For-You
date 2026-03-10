@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export default function WinModal({
   setIsClicked,
@@ -8,10 +8,27 @@ export default function WinModal({
 }) {
   const [visible, setVisible] = useState(false);
   const [timeLeft, setTimeLeft] = useState(9 * 60 + 10); // 9:10 in seconds
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => setVisible(true), 10);
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    audioRef.current = new Audio("/audio/audio_2.mp3");
+    audioRef.current.loop = true;
+    audioRef.current.volume = 0.7;
+
+    const delay = setTimeout(() => {
+      audioRef.current?.play();
+    }, 2000);
+
+    return () => {
+      clearTimeout(delay);
+      audioRef.current?.pause();
+      audioRef.current = null;
+    };
   }, []);
 
   useEffect(() => {
@@ -45,7 +62,13 @@ export default function WinModal({
           className="relative "
         />
         <div className="absolute bottom-5 sm:bottom-7 flex flex-col items-center justify-center left-1/2 w-full -translate-x-1/2">
-          <button className="w-full" onClick={() => setIsClicked(false)}>
+          <button
+            className="w-full"
+            onClick={() => {
+              audioRef.current?.pause();
+              setIsClicked(false);
+            }}
+          >
             <Image
               width={290}
               height={164}

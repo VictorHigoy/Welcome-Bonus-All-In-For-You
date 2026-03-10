@@ -1,7 +1,7 @@
 "use client";
 import localFont from "next/font/local";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const futuraBold = localFont({
   src: "../fonts/Futura-Bold.otf",
@@ -23,11 +23,21 @@ export default function SpinningWheel({
   const [rotation, setRotation] = useState(0);
   const [spinCount, setSpinCount] = useState(1);
   const [jackpot, setJackpot] = useState(8888880.5);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    audioRef.current = new Audio("/audio/audio_1.mp3");
+  }, []);
 
   const handleSpin = () => {
     if (spinning) return;
 
     setSpinning(true);
+
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0; // restart if clicked again
+      audioRef.current.play();
+    }
 
     let targetAngle = 145;
 
