@@ -18,14 +18,9 @@ export default function WinModal({
   useEffect(() => {
     audioRef.current = new Audio("/audio/audio_2.mp3");
     audioRef.current.loop = true;
-    audioRef.current.volume = 0.7;
-
-    const delay = setTimeout(() => {
-      audioRef.current?.play();
-    }, 2000);
+    audioRef.current.play();
 
     return () => {
-      clearTimeout(delay);
       audioRef.current?.pause();
       audioRef.current = null;
     };

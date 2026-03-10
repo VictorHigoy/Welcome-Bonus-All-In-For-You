@@ -64,7 +64,7 @@ export default function SpinningWheel({
       setSpinning(false);
       setSpinCount((prev) => prev + 1);
       setIsClicked(true);
-    }, 3000);
+    }, 5000);
   };
 
   handleSpinRef.current = handleSpin;
@@ -139,7 +139,7 @@ export default function SpinningWheel({
               style={{
                 transform: `translate(-50%, -50%) rotate(${rotation}deg)`,
                 transition: spinning
-                  ? "transform 3s cubic-bezier(0.33, 1, 0.68, 1)"
+                  ? "transform 5s cubic-bezier(0.33, 1, 0.68, 1)"
                   : "none",
               }}
               alt="wheel spin"
